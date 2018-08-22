@@ -1,7 +1,6 @@
 package engineer.com.profile.adapter
 
 import android.content.Context
-import android.os.Build
 import android.support.v7.widget.CardView
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
@@ -10,7 +9,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import engineer.com.profile.ActivityModel
 import engineer.com.profile.R
-import java.util.*
+import java8.util.Optional
 
 /**
  * author : engineer
@@ -47,10 +46,8 @@ class Adapter : RecyclerView.Adapter<Adapter.MyHolder> {
     override fun onBindViewHolder(p0: MyHolder, p1: Int) {
        p0.textView.text=pages[p1].name
         p0.cardView.setOnClickListener {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                Optional.of(mListener).ifPresent {
-                    mListener.onClick(pages[p1])
-                }
+            Optional.of(mListener).ifPresent {
+                mListener.onClick(pages[p1])
             }
         }
     }

@@ -8,4 +8,4 @@ package engineer.com.profile
  * version: 1.0
  */
 
-class ActivityModel(var name: String, var className: Any)
+class ActivityModel(var name: String, var className: Class<*>)

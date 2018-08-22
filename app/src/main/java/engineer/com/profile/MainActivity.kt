@@ -23,12 +23,12 @@ class MainActivity : AppCompatActivity(),Adapter.OnItemClickListener {
         adapter.setListener(this)
         recyclerView.adapter = adapter
         recyclerView.layoutManager = GridLayoutManager(this,2,
-                RecyclerView.HORIZONTAL,false)
+                RecyclerView.VERTICAL,false)
 
     }
 
     override fun onClick(model: ActivityModel) {
-        val mIntent = Intent(this,model.className.javaClass)
+        val mIntent = Intent(this,model.className)
         startActivity(mIntent)
     }
 
