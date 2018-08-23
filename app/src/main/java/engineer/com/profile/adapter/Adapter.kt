@@ -44,11 +44,15 @@ class Adapter : RecyclerView.Adapter<Adapter.MyHolder> {
     }
 
     override fun onBindViewHolder(p0: MyHolder, p1: Int) {
-       p0.textView.text=pages[p1].name
+        p0.textView.text = pages[p1].name
         p0.cardView.setOnClickListener {
             Optional.of(mListener).ifPresent {
                 mListener.onClick(pages[p1])
             }
+        }
+        when (p1%2) {
+            0 -> p0.cardView.setCardBackgroundColor(mContext.resources.getColor(R.color.colorPrimary))
+            1 -> p0.cardView.setCardBackgroundColor(mContext.resources.getColor(R.color.colorAccent))
         }
     }
 
@@ -59,6 +63,6 @@ class Adapter : RecyclerView.Adapter<Adapter.MyHolder> {
     }
 
     interface OnItemClickListener {
-        fun onClick(model:ActivityModel)
+        fun onClick(model: ActivityModel)
     }
 }
