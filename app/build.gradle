@@ -35,10 +35,15 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-    implementation project(':optimization')
     implementation "com.android.support:cardview-v7:${ext.appcompat_v7_version}"
     implementation "net.sourceforge.streamsupport:streamsupport:$streamsupport"
-
+    implementation "io.reactivex.rxjava2:rxjava:$rxjava"
+    implementation "io.reactivex.rxjava2:rxandroid:$rxandroid"
+    // leak canary
+    debugImplementation "com.squareup.leakcanary:leakcanary-android:$leak_canary"
+    releaseImplementation "com.squareup.leakcanary:leakcanary-android-no-op:$leak_canary"
+    // Optional, if you use support library fragments:
+    debugImplementation "com.squareup.leakcanary:leakcanary-support-fragment:$leak_canary"
 }
 repositories {
     mavenCentral()

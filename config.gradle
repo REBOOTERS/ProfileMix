@@ -13,5 +13,6 @@ ext {
 
     streamsupport = '1.6.3'
     rxjava = '2.1.16'
-    rxandroid = '2.0.2'
+    rxandroid = '2.1.0'
+    leak_canary = '1.6.1'
 }
