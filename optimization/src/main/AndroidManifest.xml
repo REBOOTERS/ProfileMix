@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="engineer.com.optimization">
+    package="engineer.com.optimization">
 
     <application>
-        <activity android:name=".bad.BadTimeActivity">
-        </activity>
-        <activity android:name=".good.GoodTimeActivity">
-        </activity>
+        <activity android:name=".bad.BadTimeActivity" />
+        <activity android:name=".good.GoodTimeActivity" />
+        <activity android:name=".good.GoodActivity" />
+        <activity android:name=".bad.BadActivity"></activity>
     </application>
 
 </manifest>
